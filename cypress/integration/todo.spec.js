@@ -6,6 +6,9 @@ describe('My First Test', () => {
    
     cy.get('.new-todo')
     .type('todo 1{enter}')
-  
+    .type('todo 2{enter}')
+    .type('todo 3{enter}')
+
+    cy.get('.todo').should('have.length', 3)
   })
 })
